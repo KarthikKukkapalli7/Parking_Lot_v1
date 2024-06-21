@@ -11,7 +11,7 @@ import com.DB.DataBase;
 
 public class Exit {
 
-	public long exitCost(int billId) {
+	public double exitCost(int billId) {
 		
 		
 		Date endTime = Calendar.getInstance().getTime();
@@ -19,8 +19,8 @@ public class Exit {
 		System.out.println(endTime.toString()+" "+startTime.toString());
 		
 		long difference = endTime.getTime() - startTime.getTime();
-		
-		long differenceHours = difference / (60 * 60 * 1000) % 24;
+		System.out.println(difference+" "+endTime+" "+startTime);
+		double differenceHours = (double)difference / (60 * 60 * 1000);
 		
 		return DataBase.cost.get(DataBase.Bill.get(billId).getType())*differenceHours; 
 		

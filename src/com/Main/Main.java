@@ -71,7 +71,7 @@ public class Main {
 		    		GetParkingDetails parkdetails = new GetParkingDetails();
 		    		parkdetails.getAllDetails();
 		    		int Id = sc.nextInt();
-		    		long exitcost= exit.exitCost(Id);
+		    		double exitcost= exit.exitCost(Id);
 		    		System.out.println("The cost was "+exitcost);
 		    		Payment pay = new Payment();
 		    		
